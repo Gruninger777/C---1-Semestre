@@ -2,14 +2,11 @@
 
 int main() {
     int lado1, lado2, lado3;
-
-    while (1) {
+    
         printf("Digite o primeiro lado (-1 para sair): ");
         scanf("%d", &lado1);
-
-        if (lado1 == -1) {
-            break;
-        }
+    
+    while (lado1 != -1) {
 
         printf("Digite o segundo lado: ");
         scanf("%d", &lado2);
@@ -24,7 +21,9 @@ int main() {
         } else {
             printf("Os lados não formam um triângulo retângulo.\n");
         }
-    }
+        printf("Digite o primeiro lado (-1 para sair): ");
+        scanf("%d", &lado1);
+    } 
 
     printf("Programa encerrado.\n");
     return 0;
