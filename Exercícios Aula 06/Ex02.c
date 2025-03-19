@@ -6,16 +6,15 @@ int main() {
 
    printf("Digite as notas do aluno (digite -5 para calcular a média):\n");
 
-   while (1) {
-      printf("Digite a nota: ");
-      scanf("%f", &nota);
+   printf("Digite a nota: ");
+   scanf("%f", &nota);
 
-      if (nota == -5) {
-         break;
-      }
-
+   while (nota != -5) {
       soma += nota;
       contador++;
+
+      printf("Digite a nota: ");
+      scanf("%f", &nota);
    }
 
    if (contador > 0) {
@@ -25,5 +24,5 @@ int main() {
       printf("Nenhuma nota foi digitada.\n");
    }
 
-    return 0;
+   return 0;
 }
