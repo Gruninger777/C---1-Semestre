@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    float raio, diametro, circunferencia, area;
-    const float PI = 3.14;
+    float raio, diametro, circunferencia, area, PI = 3.14;
 
     printf("Digite o raio do círculo: ");
     scanf("%f", &raio);
