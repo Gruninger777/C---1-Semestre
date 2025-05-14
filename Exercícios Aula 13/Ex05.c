@@ -1,31 +1,25 @@
 #include <stdio.h>
 
 int main() {
-    int altura;
+    int altura, cont = 0;
     char direcao;
 
-    while (1) {
-        printf("Digite a altura do triângulo (ou 0 para sair): ");
+    printf("Digite a altura do triângulo: ");
         scanf("%d", &altura);
 
-        if (altura == 0) {
-            break;
-        }
-
-        printf("Digite a direção (A para esquerda, D para direita, F para sair): ");
-        scanf(" %c", &direcao);
-
+    while (1) {
         if (direcao == 'F' || direcao == 'f') {
             break;
         }
-
-        if (direcao == 'A' || direcao == 'a') {
+        cont++;
+        if (direcao == 'A' || direcao == 'a' || cont == 1) {
             for (int i = 1; i <= altura; i++) {
                 for (int j = 1; j <= i; j++) {
                     printf("*");
                 }
                 printf("\n");
             }
+            
         } else if (direcao == 'D' || direcao == 'd') {
             for (int i = 1; i <= altura; i++) {
                 for (int j = 1; j <= altura - i; j++) {
@@ -39,6 +33,8 @@ int main() {
         } else {
             printf("Direção inválida. Use A ou D.\n");
         }
+        printf("Digite a direção (A para esquerda, D para direita, F para sair): ");
+        scanf(" %c", &direcao);
     }
 
     printf("Programa encerrado.\n");
